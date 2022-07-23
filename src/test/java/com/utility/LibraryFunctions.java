@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,8 +19,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LibraryFunctions {
 	public static Properties ObjProperties;
 	public static WebDriver driver;
-	public static enum Browser{
-		ie,chrome,edge,firefox,opeara}
+
+	public static enum Browser {
+		ie, chrome, edge, firefox, opeara
+	}
+
 	public static void ReadPropertiesFile() throws IOException {
 		try {
 			File objFile = new File(System.getProperty("user.dir") + "//src//test//resources//config.properties");
@@ -36,7 +40,7 @@ public class LibraryFunctions {
 
 	public static void LaunchBrowser() {
 		String stringbrowser = ObjProperties.getProperty("browser");
-		Browser browser=Browser.valueOf(stringbrowser);
+		Browser browser = Browser.valueOf(stringbrowser);
 		switch (browser) {
 		case ie:
 			WebDriverManager.iedriver().setup();
@@ -64,5 +68,9 @@ public class LibraryFunctions {
 		}
 		driver.get(ObjProperties.getProperty("amazonurl"));
 		driver.manage().window().maximize();
+	}
+
+	public static void WaitingForPageToLoad(int time) {
+		LibraryFunctions.driver.manage().timeouts().pageLoadTimeout(time, TimeUnit.SECONDS);
 	}
 }

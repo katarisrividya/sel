@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -19,59 +18,82 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.page.alertspage;
 import com.utility.LibraryFunctions2;
 
-public class testng3alerts2 extends LibraryFunctions2 {
-	public static Actions actions;
-
+public class testng3alertspom extends alertspage {
 	@Test(priority = -1)
 	public void LoadingDemoAlertsPage() {
 		System.out.println("inside Validate Alerts");
-		driver.navigate().to(ObjProperties.getProperty("AlertURL2")); // to direct to the website navigate is used
-		driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+		driver.navigate().to(ObjProperties.getProperty("AlertURL")); // to direct to the website navigate is used
+		WaitingForPageToLoad(60);
 		String titleOfDemoAlerts = driver.getTitle();
 		System.out.println("titleOfDemoAlerts: " + titleOfDemoAlerts);
-		Assert.assertEquals(titleOfDemoAlerts, ObjProperties.getProperty("DemoAlertsTitle2"));
+		Assert.assertEquals(titleOfDemoAlerts, ObjProperties.getProperty("DemoAlertsTitle"));
 	}
 
 	@Test(priority = 0)
-	public void ValidateAlertsNormalAlert() throws InterruptedException {
+	public void ValidateAlertsInsideAlertPage() throws InterruptedException {
 		System.out.println("inside ValidateAlerts checking all alerts");
 
 		// Normal Alert
-		WebElement ele = driver.findElement(By.xpath("//button[contains(text(),'Generate Alert Box')]"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", ele);
-		actions = new Actions(driver);
-		actions.moveToElement(ele).click(ele);
-		actions.build().perform();
+		clicknormalalert();
+		alertbtnormal = driver.switchTo().alert();
+		String txtonalert1 = alertbtnormal.getText();
 		Thread.sleep(2000);
-		Alert alertbt1 = driver.switchTo().alert();
-		String txtonalert1 = alertbt1.getText();
-		Assert.assertEquals(txtonalert1, "Cick Ok or Cancel to proceed");
-		alertbt1.accept();
-		String txtafteralert1 = driver.findElement(By.xpath("//p[@id='result']")).getText();
-		Assert.assertEquals(txtafteralert1, ObjProperties.getProperty("DemoAlerts2.1textvalidation"));
-		Thread.sleep(1000);
+		Assert.assertEquals(txtonalert1, ObjProperties.getProperty("Alert1text"));
+		acceptnormalalert();
+		Thread.sleep(2000);
 
 	}
 
 	@Test(priority = 1)
-	public void ValidateAlertsEnterAlertsinTextBox() throws InterruptedException {
-		// promptalert
-		WebElement ele1 = driver.findElement(By.xpath("//button[text()='Enter text in Alert Box']"));
-		actions = new Actions(driver);
-		actions.moveToElement(ele1).click(ele1);
-		actions.build().perform();
+	public void confirmationalert() throws InterruptedException {
+		// Confirmation Alert
+		clickconfirmationalert();
+		alertbtconfirm = driver.switchTo().alert();
 		Thread.sleep(2000);
-		Alert alertbt2 = driver.switchTo().alert();
-		alertbt2.sendKeys("Hi this is 2nd alert test");
-		alertbt2.accept();
-		String txtafteralert2 = driver.findElement(By.xpath("//p[@id='result']")).getText();
-		Assert.assertEquals(txtafteralert2, "You entered: Hi this is 2nd alert test");
+		dismissconfirmationalert();
+		Thread.sleep(2000);
 
 	}
 
+	@Test(priority = 2)
+	public void promptalert() throws InterruptedException {
+		// prompt
+		clickpromptalert();
+		alertbtprompt = driver.switchTo().alert();
+		entertextonpromptalert(ObjProperties.getProperty("Alert2SendKeysToPrompt"));
+		Thread.sleep(1000);
+		acceptpromptalert();
+
+	}
+
+	@Test(priority = 3)
+	public void fileuploadalert() {
+		// File Upload
+		fileupload();
+	}
+
+	@Test(priority = 4)
+	public void submenualert() throws InterruptedException {
+		// SUBMENU DIRECT TO OTHER PAGE
+		submenuclick();
+		clickgooglesubmenu();
+		Assert.assertEquals(driver.getTitle().toString(), "Google");
+		Thread.sleep(1000);
+		driver.navigate().back();
+	}
+
+	@Test(priority = 5)
+	public void doubleclick() throws InterruptedException {
+		// DoubleClick
+		doubleclickalert();
+		Thread.sleep(1000);
+		alertdouble = driver.switchTo().alert();
+		Assert.assertEquals(alertdouble.getText(), ObjProperties.getProperty("DoubleClickText"));
+		doubleclickaccept();
+	}
 
 	@BeforeMethod
 	public void beforeMethod() {
