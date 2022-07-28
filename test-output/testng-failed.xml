@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testng.testng6windows">
+      <class name="com.testng.testng9fileupload">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
           <include name="beforeTest"/>
-          <include name="beforeClass"/>
-          <include name="afterSuite"/>
-          <include name="afterClass"/>
           <include name="afterMethod"/>
-          <include name="ValidateWindowstutorialshut"/>
+          <include name="afterSuite"/>
           <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="validatefileUpload"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.testng.testng6windows -->
+      </class> <!-- com.testng.testng9fileupload -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
