@@ -66,8 +66,10 @@ public class testng6Windows2 extends windows2page {
 			if(!parent.equalsIgnoreCase(child)) {
 				driver.switchTo().window(child);
 				Thread.sleep(1000);
-			    WebElement text2 = driver.findElement(By.cssSelector("body")); //AS text in body is in "" we can't get text by .getText() 
-                System.out.println("Message " + text2.getText());
+			    String text2 = driver.findElement(By.xpath("//body")).getAttribute("outerHTML"); //AS text in body is in "" we can't get text by .getText() 
+			    System.out.println("Message " + text2);
+			    //String bodymsg=driver.getPageSource();  //USING PAGESOURCE DIDNOT WORK
+			    //System.out.println("Message " + bodymsg);
                 //Assert.assertEquals(text2.getText(),ObjProperties.getProperty("Windows2NewWindowMessage"));
                 driver.close();
 			}

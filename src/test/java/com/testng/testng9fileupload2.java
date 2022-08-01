@@ -35,27 +35,24 @@ import com.utility.Constant;
 import com.utility.LibraryFunctions;
 import com.utility.LibraryFunctions2;
 
-public class testng9fileupload extends fileuploadpage {
+public class testng9fileupload2 extends fileuploadpage {
 	@Test(priority = -1)
 	public void LoadingFileUploadPage() {
 		System.out.println("inside File Upload");
-		driver.navigate().to(ObjProperties.getProperty("fileupload")); // to direct to the website navigate is used
+		driver.navigate().to(ObjProperties.getProperty("fileupload2")); //to direct to the website navigate is used
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		String titleOfFileUpload = driver.getTitle();
 		System.out.println("titleOfFileUpload: " + titleOfFileUpload);
-		// Assert.assertEquals(titleOfFileUpload,
-		// ObjProperties.getProperty("FileUploadTitle"));
+		//Assert.assertEquals(titleOfFileUpload, ObjProperties.getProperty("FileUploadTitle"));
 	}
-
 	@Test(priority = 0)
 	public void validatefileUpload() throws InterruptedException {
-		// driver.findElement(fileupload).sendKeys(ObjProperties.getProperty("FileUploadPath"));
-		// //TYPE-1
+		//driver.findElement(fileupload).sendKeys(ObjProperties.getProperty("FileUploadPath")); //TYPE-1
 
-		Actions obj = new Actions(driver);
-		WebElement ele = driver.findElement(fileupload);
+		Actions obj=new Actions(driver);
+		WebElement ele=driver.findElement(fileupload);
 		obj.click(ele).build().perform();
-
+		
 		StringSelection objStringSelection = new StringSelection(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\materials\\fileupload.txt");
 		Clipboard objClipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -69,48 +66,49 @@ public class testng9fileupload extends fileuploadpage {
 				e.printStackTrace();
 			}
 		}
-
+		
 		try {
 			Robot objRobot = new Robot();
 			objRobot.keyPress(KeyEvent.VK_ENTER);
 			objRobot.keyRelease(KeyEvent.VK_ENTER);
 			Thread.sleep(2000);
-			// objRobot.wait(250);
+			//objRobot.wait(250);
 			objRobot.keyPress(KeyEvent.VK_CONTROL);
 			objRobot.keyPress(KeyEvent.VK_V);
 			Thread.sleep(2000);
-			// objRobot.wait(250);
+			//objRobot.wait(250);
 			objRobot.keyRelease(KeyEvent.VK_CONTROL);
 			objRobot.keyRelease(KeyEvent.VK_V);
 			Thread.sleep(2000);
-			// objRobot.wait(2500);
+			//objRobot.wait(2500);
+			objRobot.keyPress(KeyEvent.VK_ENTER);
+			objRobot.keyRelease(KeyEvent.VK_ENTER);
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //THIS try-catch suppose to be used once as it is asking twice I repeated the code
+		try {
+			Robot objRobot = new Robot();
+			objRobot.keyPress(KeyEvent.VK_ENTER);
+			objRobot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+			//objRobot.wait(250);
+			objRobot.keyPress(KeyEvent.VK_CONTROL);
+			objRobot.keyPress(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			//objRobot.wait(250);
+			objRobot.keyRelease(KeyEvent.VK_CONTROL);
+			objRobot.keyRelease(KeyEvent.VK_V);
+			Thread.sleep(2000);
+			//objRobot.wait(2500);
 			objRobot.keyPress(KeyEvent.VK_ENTER);
 			objRobot.keyRelease(KeyEvent.VK_ENTER);
 		} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try {
-			Robot objRobot = new Robot();
-			objRobot.keyPress(KeyEvent.VK_ENTER);
-			objRobot.keyRelease(KeyEvent.VK_ENTER);
-			Thread.sleep(2000);
-			// objRobot.wait(250);
-			objRobot.keyPress(KeyEvent.VK_CONTROL);
-			objRobot.keyPress(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			// objRobot.wait(250);
-			objRobot.keyRelease(KeyEvent.VK_CONTROL);
-			objRobot.keyRelease(KeyEvent.VK_V);
-			Thread.sleep(2000);
-			// objRobot.wait(2500);
-			objRobot.keyPress(KeyEvent.VK_ENTER);
-			objRobot.keyRelease(KeyEvent.VK_ENTER);
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
+		
 	}
 
 	@BeforeMethod
@@ -159,5 +157,5 @@ public class testng9fileupload extends fileuploadpage {
 	public void afterSuite() {
 		System.out.println("inside afterSuite");
 	}
-
+  
 }

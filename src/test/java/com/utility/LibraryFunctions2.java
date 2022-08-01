@@ -4,13 +4,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -52,8 +60,16 @@ public class LibraryFunctions2 {
 			break;
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-			;
-			driver = new ChromeDriver();
+			//driver = new ChromeDriver();
+			ChromeOptions objChromeOptions = new ChromeOptions();
+			objChromeOptions.setAcceptInsecureCerts(true);
+			// driver= new ChromeDriver(objChromeOptions);
+			Map<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+			chromePrefs.put("download.prompt_for_download", false);
+			chromePrefs.put("download.default_directory", System.getProperty("user.dir"));
+			objChromeOptions.setExperimentalOption("prefs", chromePrefs);
+			driver = new ChromeDriver(objChromeOptions);
 			break;
 		case "edge":
 			WebDriverManager.edgedriver().setup();
@@ -126,6 +142,47 @@ public class LibraryFunctions2 {
 		objActions.clickAndHold(DragElement_Source);
 		objActions.moveToElement(DropElement_Destination);
 		objActions.build().perform();
+	}
+	
+	//Used to take screenshot
+	public static void TakeScreenShot() {
+		try {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String dateName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+		String destination = System.getProperty("user.dir") + "//ScreenShots//" + dateName + "captured.jpeg";
+		FileUtils.copyFile(src, new File(destination));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/*
+	 * This method is used to take screen shot and store the screen shots in side ScreenShot folder
+	 */
+	public static String TakeScreenShot(String testcaseName) throws IOException {
+		
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String dateName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+		String destination = System.getProperty("user.dir") + "//ScreenShots//" + dateName + testcaseName+"captured.jpeg";
+		FileUtils.copyFile(src, new File(destination));
+		return destination;
+		
+	}
+	
+	/* 
+	 * This method is used to take screen shot and store the screen shots in side ScreenShot folder
+	 */
+	public static void TakeScreenShotofSpecifiedWebElement(WebElement element) {
+		try {
+		File src = element.getScreenshotAs(OutputType.FILE);
+		String dateName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+		String destination = System.getProperty("user.dir") + "//ScreenShots//" + dateName + "captured.jpeg";
+		FileUtils.copyFile(src, new File(destination));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

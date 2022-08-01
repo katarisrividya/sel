@@ -45,6 +45,7 @@ public class testng4framespom extends framepage {
 		driver.switchTo().frame("frame3");
 		checkinframe3();
 		driver.switchTo().defaultContent(); //TO get to web page as iframe 2 will be in web page seperately like iframe 1
+		TakeScreenShot();
 		
 		//frame 2
 		System.out.println("iframe 2");

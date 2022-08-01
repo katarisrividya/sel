@@ -42,6 +42,7 @@ public class testng1 extends LibraryFunctions {
 	  System.out.println("This test is to validate by brand");
 	  driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	  driver.findElement(By.xpath("//span[contains(text(),'HP')]//preceding-sibling::div[contains(@class,'a-checkbox')]//i")).click();
+	 
 	  //driver.findElement(By.xpath("//span[contains(text(),'Dell')]//preceding-sibling::div[contains(@class,'a-checkbox')]//i")).click();
 	  //driver.findElement(By.xpath("//span[contains(text(),'Apple')]//preceding-sibling::div[contains(@class,'a-checkbox')]//i")).click();
   }
