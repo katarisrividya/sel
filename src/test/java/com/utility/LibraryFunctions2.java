@@ -7,11 +7,16 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -36,7 +41,7 @@ public class LibraryFunctions2 {
 	public static WebDriver driver;
 	public static Actions objActions;
 	public static WebDriverWait Wait;
-
+	public static HashMap<String,String> hmap=new HashMap<String,String>();
 	public static void ReadPropertiesFile() throws IOException {
 		try {
 			System.out.println(System.getProperty("user.dir"));
@@ -183,6 +188,58 @@ public class LibraryFunctions2 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+
+	public static HashMap<String, String> ReadExcelFile(XSSFSheet objWorkSheet, int row) {
+		// TODO Auto-generated method stub
+		DataFormatter ObjFormatter = new DataFormatter();
+		hmap.put("RunMode",objWorkSheet.getRow(row).getCell(0).getStringCellValue());
+		hmap.put("TestCaseName",objWorkSheet.getRow(row).getCell(1).getStringCellValue());
+		hmap.put("FirstName",objWorkSheet.getRow(row).getCell(2).getStringCellValue());
+		hmap.put("LastName",objWorkSheet.getRow(row).getCell(3).getStringCellValue());
+		hmap.put("Address",objWorkSheet.getRow(row).getCell(4).getStringCellValue());
+		hmap.put("Email",objWorkSheet.getRow(row).getCell(5).getStringCellValue());
+		//As phoneNumber is not in form of string we format
+		hmap.put("PhoneNumber",ObjFormatter.formatCellValue(objWorkSheet.getRow(row).getCell(6)));
+		hmap.put("Gender",objWorkSheet.getRow(row).getCell(7).getStringCellValue());
+		hmap.put("Hobbies",objWorkSheet.getRow(row).getCell(8).getStringCellValue());
+		hmap.put("Languages",objWorkSheet.getRow(row).getCell(9).getStringCellValue());
+		hmap.put("Skills",objWorkSheet.getRow(row).getCell(10).getStringCellValue());
+		hmap.put("Country",objWorkSheet.getRow(row).getCell(11).getStringCellValue());
+		hmap.put("SelectCountry",objWorkSheet.getRow(row).getCell(12).getStringCellValue());
+		
+		hmap.put("DOB_YY",ObjFormatter.formatCellValue(objWorkSheet.getRow(row).getCell(13)));
+		hmap.put("DOB_MM",ObjFormatter.formatCellValue(objWorkSheet.getRow(row).getCell(14)));
+		hmap.put("DOB_DD",ObjFormatter.formatCellValue(objWorkSheet.getRow(row).getCell(15)));
+		
+		hmap.put("Password",objWorkSheet.getRow(row).getCell(16).getStringCellValue());
+		hmap.put("confirmPassword",objWorkSheet.getRow(row).getCell(17).getStringCellValue());
+															
+
+		return hmap;
+	}
+	public static void SelectValueFromDropDown(List<WebElement> All_options, String Dropdownvaluetoselect) {
+		// TODO Auto-generated method stub
+		//We can follow this method when options in ul/li or select/options form **************
+		for(int i=0;i<All_options.size();i++) {
+			String element=All_options.get(i).getText();
+			//System.out.println("IndividualValue at index: "+i+"is "+element);
+			if(element.equalsIgnoreCase(Dropdownvaluetoselect)) {
+				All_options.get(i).click();
+				break;
+			}
+		}
+		
+	}
+
+	public static void WriteToExcelFile(XSSFWorkbook objWorkBook, XSSFSheet objWorkSheet, int row) {
+		// TODO Auto-generated method stub
+		objWorkSheet=objWorkBook.getSheet(ObjProperties.getProperty("DataDrivenSheetName"));
+		System.out.println("Writing on excel for row"+row);
+		XSSFCellStyle CellStyle=objWorkBook.createCellStyle();
+		objWorkSheet.getRow(row).createCell(18).setCellValue("PASS");
+		objWorkSheet.getRow(row).getCell(18).setCellStyle(CellStyle);
 	}
 
 }
