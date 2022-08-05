@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -240,6 +243,30 @@ public class LibraryFunctions2 {
 		XSSFCellStyle CellStyle=objWorkBook.createCellStyle();
 		objWorkSheet.getRow(row).createCell(18).setCellValue("PASS");
 		objWorkSheet.getRow(row).getCell(18).setCellStyle(CellStyle);
+	}
+
+	public static void CheckLink(String individual_Link) {
+		// TODO Auto-generated method stub
+		try {
+			URL objurl=new URL(individual_Link);
+			HttpURLConnection objconnection=(HttpURLConnection)objurl.openConnection();
+			objconnection.connect();
+			int ResponseStatusCode = objconnection.getResponseCode();
+			if(ResponseStatusCode>=200 && ResponseStatusCode<=226) {
+				System.out.println("URL:"+individual_Link +" : "+"ResponseStatusCode: "+ResponseStatusCode +" is a valid link with status between 200 & 208");
+			}else if(ResponseStatusCode>=300 && ResponseStatusCode<=308) {
+				System.out.println("URL:"+individual_Link +" : "+"ResponseStatusCode: "+ResponseStatusCode +" is a Redirection link with status between 300 & 308");
+			}else if(ResponseStatusCode>=400 && ResponseStatusCode<=499) {
+				System.out.println("URL:"+individual_Link +" : "+"ResponseStatusCode: "+ResponseStatusCode +" is a ClientError link with status between 400 & 499");
+			}else if(ResponseStatusCode>=500 && ResponseStatusCode<=599) {
+				System.out.println("URL:"+individual_Link +" : "+"ResponseStatusCode: "+ResponseStatusCode +" is a ServerError link with status between 500 & 599");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 }
