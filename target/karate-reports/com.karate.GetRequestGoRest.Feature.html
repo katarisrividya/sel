@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("22015ed6-bf7a-4f3f-ac15-88dcd8d68f0d",{name:"skatari"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>com.karate.GetRequestGoRest.Feature</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-08-05 05:20:56 pm</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:7]"><span>[1:7]</span> <span>Get details Of All Users</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">com/karate/GetRequestGoRest.Feature</span><span class="feature-label">|</span>
+          <span class="feature-name">To Get the details Of User from GoRest</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:7]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:7]</span>
+                <span class="scenario-name">Get details Of All Users</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1373</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:7]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def config = read(&#39;Token.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + config.tokenID</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://gorest.co.in&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1368</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">17:20:54.944 request:
+1 &gt; GET https://gorest.co.in
+1 &gt; Authorization: Bearer 985bda3013fd09fd86acd592c14e582dda086072f98eb3fddb1de50197d0f35c
+1 &gt; Host: gorest.co.in
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+17:20:56.308 response time in milliseconds: 1353
+1 &lt; 200
+1 &lt; Date: Fri, 05 Aug 2022 11:50:56 GMT
+1 &lt; Content-Type: text/html; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-XSS-Protection: 0
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Link: &lt;/assets/application-2715366c2372d5dfabfa9c9d05a0e84b9c0de17fe12c2d96e07d2db0e218fed2.css&gt;; rel=preload; as=style; nopush
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Feature-Policy: camera &#39;none&#39;; gyroscope &#39;none&#39;; microphone &#39;none&#39;; usb &#39;none&#39;; fullscreen &#39;self&#39;
+1 &lt; X-Request-Id: d4b2424a-81ab-4502-8b5c-028259595900
+1 &lt; X-Runtime: 0.013191
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=v9eCkxTnbA8FnQ1tx6iOBkrF8e7ofjJQYaQXRXBNEqQcLhBVReQ3Ospfh2dUOFGN3tlifoSvACcTuysHeXxnXj%2BIK%2FJt4JOeRugln09y7VBhrQcHngk4u1TTVenO9j0%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 735f5167bb161ead-AMS
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: _gorest_session=cG9UPgTw%2FD8xCxego1eRagY4ePE9RxeWOcvuEqwVlYvxHZySXy%2F6tTN0lwvTL4A6O%2F48CZyuOVc%2BfhT7EJ4t7dwq6Hnz2S%2B5lXi4TH22er7VO35EqClOsnM5ipoOiw2UXMpU2HBvluRTH4W9Zp6OTR0qourdBZVhK6Odmyl9EIgDn5EydYN6stOPGYbON9r0hqFlWHexP0G7Hkv2jpt%2BY9HSdyQE5kbFKoSYC0bnP2fNEXsblbPQYxufEc2fscpPxWg6znwDpLU5KAegaImumYDZm0UcCyQ%3D--30z8i%2F8nT%2BfunbM2--6JDPkxcvGznzq%2BNnBPvirg%3D%3D; Domain=gorest.co.in; Secure
+&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;meta content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; name=&quot;viewport&quot; /&gt;&lt;link href=&quot;/favicon.ico&quot; rel=&quot;icon&quot; type=&quot;image/x-icon&quot; /&gt;&lt;title&gt;GraphQL and REST API for Testing and Prototyping | GO REST&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;24/7 online fake GraphQL and REST API service for quick testing and prototyping of web and android applications. Supports authentication, custom rate limiting, response format negotiation&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;graphql, rest api, fake data, api testing, graphql testing, json response, xml response, oauth, rate limiting&quot;&gt;&lt;meta name=&quot;csrf-param&quot; content=&quot;authenticity_token&quot; /&gt;
+&lt;meta name=&quot;csrf-token&quot; content=&quot;qOhCUajMkzzyPNJfX10Yc8ttdGjzgGB4lfTBr-b0u8fffP6sLQKHvKW5BTpDJxr4nwk8Ng76kOIF0mxNEIIFaQ&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/application-2715366c2372d5dfabfa9c9d05a0e84b9c0de17fe12c2d96e07d2db0e218fed2.css&quot; media=&quot;all&quot; data-turbolinks-track=&quot;reload&quot; /&gt;&lt;script src=&quot;/packs/js/application-84cecc93f869802defaa.js&quot; data-turbolinks-track=&quot;reload&quot; defer=&quot;defer&quot;&gt;&lt;/script&gt;&lt;script async=&quot;true&quot; crossorigin=&quot;anonymous&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4930099895671899&quot;&gt;&lt;/script&gt;&lt;script async=&quot;true&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=G-7KR6VNWHWS&quot;&gt;&lt;/script&gt;&lt;script&gt;window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(&#39;js&#39;, new Date());gtag(&#39;config&#39;, &#39;G-7KR6VNWHWS&#39;);&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-dark sticky-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;&lt;i class=&quot;fas fa-exchange-alt&quot;&gt;&lt;/i&gt; Go REST&lt;/a&gt;&lt;button aria-controls=&quot;AppNavBar&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot; class=&quot;navbar-toggler&quot; data-bs-target=&quot;#AppNavBar&quot; data-bs-toggle=&quot;collapse&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;AppNavBar&quot;&gt;&lt;ul class=&quot;navbar-nav ms-auto&quot;&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/chandamama-stories&quot;&gt;&lt;i class=&quot;fas fa-cloud-moon&quot;&gt;&lt;/i&gt; Chandamama Stories&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/qa&quot;&gt;&lt;i class=&quot;fas fa-life-ring&quot;&gt;&lt;/i&gt; Help&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/rest-console&quot;&gt;&lt;i class=&quot;fab fa-linux&quot;&gt;&lt;/i&gt; Rest Console&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;nav-item dropdown&quot;&gt;&lt;a aria-expanded=&quot;false&quot; class=&quot;nav-link dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; href=&quot;#&quot; id=&quot;ToolsDropDown&quot; role=&quot;button&quot;&gt;&lt;i class=&quot;fas fa-tools&quot;&gt;&lt;/i&gt; Tools&lt;/a&gt;&lt;ul aria-labelledby=&quot;ToolsDropDown&quot; class=&quot;dropdown-menu&quot;&gt;&lt;li class=&quot;&quot;&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;/tools/base64-encode-decode&quot;&gt;Base64 Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;&quot;&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;/tools/url-encode-decode&quot;&gt;Url Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;&quot;&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;/tools/gcode-translator&quot;&gt;G-Code Translator&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/consumer/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container pt-3&quot;&gt;&lt;h1 class=&quot;text-center&quot;&gt;GraphQL and REST API for Testing and Prototyping&lt;/h1&gt;&lt;h4 class=&quot;text-center text-muted&quot;&gt;fake data | real responses | 24/7 online&lt;/h4&gt;&lt;div class=&quot;row mt-5&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3&gt;Resources&lt;/h3&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/users&quot;&gt;https://gorest.co.in/public/v2/users&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;2666&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/posts&quot;&gt;https://gorest.co.in/public/v2/posts&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;1300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/comments&quot;&gt;https://gorest.co.in/public/v2/comments&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;1315&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/todos&quot;&gt;https://gorest.co.in/public/v2/todos&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;1330&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3&gt;Trying it Out&lt;/h3&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/users&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Create a new user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET /public/v2/users/50&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Get user details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;PUT|PATCH /public/v2/users/50&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Update user details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;DELETE /public/v2/users/50&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Delete user&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-3&quot;&gt;Nested Resources&lt;/h3&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET &lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/users/50/posts&quot;&gt;/public/v2/users/50/posts&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Retrieves user posts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET &lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/posts/50/comments&quot;&gt;/public/v2/posts/50/comments&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Retrieves post comments&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET &lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/users/50/todos&quot;&gt;/public/v2/users/50/todos&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Retrieves user todos&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/users/50/posts&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Creates a user post&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/posts/50/comments&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Creates a post comment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/users/50/todos&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Creates a user todo&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul&gt;&lt;li class=&quot;text-warning&quot;&gt;Do not post your personal data like name, email, phone, photo etc...&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;For paged results parameter &quot;page&quot; should be passed in url ex: GET &lt;code&gt;/public/v2/users?page=1&lt;/code&gt;&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;Request methods PUT, POST, PATCH, DELETE needs access token, which needs to be passed with &amp;quot;Authorization&amp;quot; header as Bearer token.&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;API Versions &lt;code&gt;/public-api/*&lt;/code&gt;, &lt;code&gt;/public/v1/*&lt;/code&gt; and &lt;code&gt;/public/v2/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/consumer/login&quot;&gt;Get your access token&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5&quot;&gt;GraphQL Endpoint&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;GraphQL API is available at &lt;code&gt;https://gorest.co.in/public/v2/graphql&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;/graphql/schema.json&quot;&gt;View GraphQL json schema&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;graphql/schema.graphql&quot;&gt;View GrapQL schema&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5&quot;&gt;Features&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Fully secured quick prototyping.&lt;/li&gt;&lt;li&gt;Response format negotiation. (supporting JSON and XML add &amp;quot;.json&amp;quot; or &amp;quot;.xml&amp;quot; to api end point)&lt;/li&gt;&lt;li&gt;Support for the OPTIONS and HEAD verbs.&lt;/li&gt;&lt;li&gt;Full search support on all fields. Ex: https://gorest.co.in/public/v2/users?name=kumar&lt;/li&gt;&lt;li&gt;Data created/modified by a user is only visible to that perticular user, all data will be deleted and recreated on daily basis.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/my-account/logs&quot;&gt;Request and response logging.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3 class=&quot;mt-3&quot;&gt;Rate Limiting Headers&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/my-account/access-tokens&quot;&gt;Customize the rate limit per access token.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-RateLimit-Limit&lt;/code&gt; number of allowed requests/minute.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-RateLimit-Remaining&lt;/code&gt; remaining requests within the current period.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-RateLimit-Reset&lt;/code&gt; seconds to wait before having maximum number of allowed requests again.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3 class=&quot;mt-3&quot;&gt;Pagination Headers&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Total&lt;/code&gt; total number of results.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Pages&lt;/code&gt; total number of pages.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Page&lt;/code&gt; current page number.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Limit&lt;/code&gt; results per page.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-3&quot;&gt;API Version 2&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Path: &lt;code&gt;/public/v2/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Response format Object or Array of Objects &lt;code&gt;{}&lt;/code&gt; or &lt;code&gt;[{}]&lt;/code&gt;&lt;/li&gt;&lt;li&gt;HTTP Status code contains the actual response code, response headers contains the pagination information, response body contains the results.&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-3&quot;&gt;API Version 1&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Path: &lt;code&gt;/public/v1/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Response format &lt;code&gt;{ meta:, data: }&lt;/code&gt;&lt;/li&gt;&lt;li&gt;HTTP status code contains the actual response code, &lt;code&gt;meta&lt;/code&gt; contains the pagination information and &lt;code&gt;data&lt;/code&gt; contains the actual results&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-3&quot;&gt;API Version 0&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Path: &lt;code&gt;/public-api/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Response format &lt;code&gt;{ code :, meta:, data: }&lt;/code&gt;&lt;/li&gt;&lt;li&gt;HTTP status code is always 200, &lt;code&gt;code&lt;/code&gt; contains the actual response code, &lt;code&gt;meta&lt;/code&gt; contains the pagination information, &lt;code&gt;data&lt;/code&gt; contains the actual results&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5&quot;&gt;Authentication&lt;/h3&gt;&lt;p&gt;Unlike Web applications, RESTful APIs are usually stateless, which means sessions or cookies should not be used. Therefore, each request should come with some sort of authentication credentials. A common practice is to send a secret access token with each request to authenticate the user. Since an access token can be used to uniquely identify and authenticate a user, API requests should always be sent via HTTPS to prevent man-in-the-middle (MitM) attacks. &lt;/p&gt;&lt;p&gt;There are different ways to send an access token:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Basic_access_authentication&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;HTTP Basic Auth&lt;/a&gt;: the access token is sent as the username.&lt;/li&gt;&lt;li&gt;Query parameter: the access token is sent as a query parameter in the API URL. &lt;br /&gt;e.g. &lt;samp&gt;https://gorest.co.in/public/v2/users?access-token=xxx&lt;/samp&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://oauth.net/2/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;OAuth 2&lt;/a&gt;: the access token is obtained by the consumer from an authorization server and sent to the API server via &lt;a href=&quot;https://tools.ietf.org/html/rfc6750&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;HTTP Bearer Tokens &lt;/a&gt;, according to the OAuth2 protocol.&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;This API supports only &amp;quot;HTTP Bearer Tokens&amp;quot; and &amp;quot;Query parameter Auth&amp;quot;&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5 mb-3&quot;&gt;cUrl Examples for REST API&lt;/h3&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;List users&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XGET &quot;https://gorest.co.in/public/v2/users&quot;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Create user&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/users&quot; -d &#39;{&quot;name&quot;:&quot;Tenali Ramakrishna&quot;, &quot;gender&quot;:&quot;male&quot;, &quot;email&quot;:&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;dfabbab1beb3b6f1adbeb2beb4adb6acb7b1be9feeeabcbaf1bcb0b2&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;&quot;, &quot;status&quot;:&quot;active&quot;}&#39; &lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Update user&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPATCH &quot;https://gorest.co.in/public/v2/users/50&quot; -d &#39;{&quot;name&quot;:&quot;Allasani Peddana&quot;, &quot;email&quot;:&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;5c3d30303d2f3d3235722c3938383d323d1c6d693f39723f3331&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;&quot;, &quot;status&quot;:&quot;active&quot;}&#39; &lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Delete user&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XDELETE &quot;https://gorest.co.in/public/v2/users/50&quot;&lt;/samp&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-5 mb-3&quot;&gt;cUrl Examples for GraphQL&lt;/h3&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;List users&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;query{users {pageInfo {endCursor startCursor hasNextPage hasPreviousPage} totalCount nodes {id name email gender status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Get User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;query{user(id: 50) { id name email gender status }}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Create User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;mutation{createUser(input: {name: \&quot;Tenali Ramakrishna\&quot; gender: \&quot;male\&quot; email: \&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;2e5a4b404f4247005c4f434f455c475d46404f6e1f1b4d4b004d4143&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;\&quot; status: \&quot;active\&quot;}) {user{id name gender email status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Update User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;mutation{updateUser(input: {id: 50 name: \&quot;Allasani Peddana\&quot; email: \&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;03626f6f6270626d6a2d73666767626d6243323660662d606c6e&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;\&quot; status: \&quot;active\&quot;}) {user{id name gender email status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Delete User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;mutation{deleteUser(input: {id: 50}){user {id name email gender status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-5&quot;&gt;REST API Http Response Codes&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;200: OK. Everything worked as expected.&lt;/li&gt;&lt;li&gt;201: A resource was successfully created in response to a POST request. The Location header contains the URL pointing to the newly created resource.&lt;/li&gt;&lt;li&gt;204: The request was handled successfully and the response contains no body content (like a DELETE request).&lt;/li&gt;&lt;li&gt;304: The resource was not modified. You can use the cached version.&lt;/li&gt;&lt;li&gt;400: Bad request. This could be caused by various actions by the user, such as providing invalid JSON data in the request body etc.&lt;/li&gt;&lt;li&gt;401: Authentication failed.&lt;/li&gt;&lt;li&gt;403: The authenticated user is not allowed to access the specified API endpoint.&lt;/li&gt;&lt;li&gt;404: The requested resource does not exist.&lt;/li&gt;&lt;li&gt;405: Method not allowed. Please check the Allow header for the allowed HTTP methods.&lt;/li&gt;&lt;li&gt;415: Unsupported media type. The requested content type or version number is invalid.&lt;/li&gt;&lt;li&gt;422: Data validation failed (in response to a POST request, for example). Please check the response body for detailed error messages.&lt;/li&gt;&lt;li&gt;429: Too many requests. The request was rejected due to rate limiting.&lt;/li&gt;&lt;li&gt;500: Internal server error. This could be caused by internal program errors.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;hr class=&quot;mt-5&quot; /&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;footer&quot;&gt;&lt;ul class=&quot;list-inline&quot;&gt;&lt;li class=&quot;list-inline-item&quot;&gt;&amp;copy; Go Rest 2022&lt;/li&gt;&lt;li class=&quot;list-inline-item float-lg-end&quot;&gt;&lt;a href=&quot;/privacy-policy&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;list-inline-item float-lg-end me-3&quot;&gt;&lt;a href=&quot;/contact-us&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;script data-cfasync=&quot;false&quot; src=&quot;/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">17:20:56.311 [print] &lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;meta content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; name=&quot;viewport&quot; /&gt;&lt;link href=&quot;/favicon.ico&quot; rel=&quot;icon&quot; type=&quot;image/x-icon&quot; /&gt;&lt;title&gt;GraphQL and REST API for Testing and Prototyping | GO REST&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;24/7 online fake GraphQL and REST API service for quick testing and prototyping of web and android applications. Supports authentication, custom rate limiting, response format negotiation&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;graphql, rest api, fake data, api testing, graphql testing, json response, xml response, oauth, rate limiting&quot;&gt;&lt;meta name=&quot;csrf-param&quot; content=&quot;authenticity_token&quot; /&gt;
+&lt;meta name=&quot;csrf-token&quot; content=&quot;qOhCUajMkzzyPNJfX10Yc8ttdGjzgGB4lfTBr-b0u8fffP6sLQKHvKW5BTpDJxr4nwk8Ng76kOIF0mxNEIIFaQ&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/application-2715366c2372d5dfabfa9c9d05a0e84b9c0de17fe12c2d96e07d2db0e218fed2.css&quot; media=&quot;all&quot; data-turbolinks-track=&quot;reload&quot; /&gt;&lt;script src=&quot;/packs/js/application-84cecc93f869802defaa.js&quot; data-turbolinks-track=&quot;reload&quot; defer=&quot;defer&quot;&gt;&lt;/script&gt;&lt;script async=&quot;true&quot; crossorigin=&quot;anonymous&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4930099895671899&quot;&gt;&lt;/script&gt;&lt;script async=&quot;true&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=G-7KR6VNWHWS&quot;&gt;&lt;/script&gt;&lt;script&gt;window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(&#39;js&#39;, new Date());gtag(&#39;config&#39;, &#39;G-7KR6VNWHWS&#39;);&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-dark sticky-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;&lt;i class=&quot;fas fa-exchange-alt&quot;&gt;&lt;/i&gt; Go REST&lt;/a&gt;&lt;button aria-controls=&quot;AppNavBar&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot; class=&quot;navbar-toggler&quot; data-bs-target=&quot;#AppNavBar&quot; data-bs-toggle=&quot;collapse&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;AppNavBar&quot;&gt;&lt;ul class=&quot;navbar-nav ms-auto&quot;&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/chandamama-stories&quot;&gt;&lt;i class=&quot;fas fa-cloud-moon&quot;&gt;&lt;/i&gt; Chandamama Stories&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/qa&quot;&gt;&lt;i class=&quot;fas fa-life-ring&quot;&gt;&lt;/i&gt; Help&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/rest-console&quot;&gt;&lt;i class=&quot;fab fa-linux&quot;&gt;&lt;/i&gt; Rest Console&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;nav-item dropdown&quot;&gt;&lt;a aria-expanded=&quot;false&quot; class=&quot;nav-link dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; href=&quot;#&quot; id=&quot;ToolsDropDown&quot; role=&quot;button&quot;&gt;&lt;i class=&quot;fas fa-tools&quot;&gt;&lt;/i&gt; Tools&lt;/a&gt;&lt;ul aria-labelledby=&quot;ToolsDropDown&quot; class=&quot;dropdown-menu&quot;&gt;&lt;li class=&quot;&quot;&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;/tools/base64-encode-decode&quot;&gt;Base64 Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;&quot;&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;/tools/url-encode-decode&quot;&gt;Url Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;&quot;&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;/tools/gcode-translator&quot;&gt;G-Code Translator&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;/consumer/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container pt-3&quot;&gt;&lt;h1 class=&quot;text-center&quot;&gt;GraphQL and REST API for Testing and Prototyping&lt;/h1&gt;&lt;h4 class=&quot;text-center text-muted&quot;&gt;fake data | real responses | 24/7 online&lt;/h4&gt;&lt;div class=&quot;row mt-5&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3&gt;Resources&lt;/h3&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/users&quot;&gt;https://gorest.co.in/public/v2/users&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;2666&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/posts&quot;&gt;https://gorest.co.in/public/v2/posts&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;1300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/comments&quot;&gt;https://gorest.co.in/public/v2/comments&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;1315&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;&lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/todos&quot;&gt;https://gorest.co.in/public/v2/todos&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;1330&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3&gt;Trying it Out&lt;/h3&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/users&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Create a new user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET /public/v2/users/50&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Get user details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;PUT|PATCH /public/v2/users/50&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Update user details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;DELETE /public/v2/users/50&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Delete user&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-3&quot;&gt;Nested Resources&lt;/h3&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET &lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/users/50/posts&quot;&gt;/public/v2/users/50/posts&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Retrieves user posts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET &lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/posts/50/comments&quot;&gt;/public/v2/posts/50/comments&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Retrieves post comments&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;GET &lt;a target=&quot;_blank&quot; class=&quot;text-white&quot; href=&quot;https://gorest.co.in/public/v2/users/50/todos&quot;&gt;/public/v2/users/50/todos&lt;/a&gt;&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Retrieves user todos&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;table class=&quot;table table-responsive-sm table-sm&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/users/50/posts&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Creates a user post&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/posts/50/comments&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Creates a post comment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;samp&gt;POST /public/v2/users/50/todos&lt;/samp&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;Creates a user todo&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul&gt;&lt;li class=&quot;text-warning&quot;&gt;Do not post your personal data like name, email, phone, photo etc...&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;For paged results parameter &quot;page&quot; should be passed in url ex: GET &lt;code&gt;/public/v2/users?page=1&lt;/code&gt;&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;Request methods PUT, POST, PATCH, DELETE needs access token, which needs to be passed with &amp;quot;Authorization&amp;quot; header as Bearer token.&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;API Versions &lt;code&gt;/public-api/*&lt;/code&gt;, &lt;code&gt;/public/v1/*&lt;/code&gt; and &lt;code&gt;/public/v2/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/consumer/login&quot;&gt;Get your access token&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5&quot;&gt;GraphQL Endpoint&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;GraphQL API is available at &lt;code&gt;https://gorest.co.in/public/v2/graphql&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;/graphql/schema.json&quot;&gt;View GraphQL json schema&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;graphql/schema.graphql&quot;&gt;View GrapQL schema&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5&quot;&gt;Features&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Fully secured quick prototyping.&lt;/li&gt;&lt;li&gt;Response format negotiation. (supporting JSON and XML add &amp;quot;.json&amp;quot; or &amp;quot;.xml&amp;quot; to api end point)&lt;/li&gt;&lt;li&gt;Support for the OPTIONS and HEAD verbs.&lt;/li&gt;&lt;li&gt;Full search support on all fields. Ex: https://gorest.co.in/public/v2/users?name=kumar&lt;/li&gt;&lt;li&gt;Data created/modified by a user is only visible to that perticular user, all data will be deleted and recreated on daily basis.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/my-account/logs&quot;&gt;Request and response logging.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3 class=&quot;mt-3&quot;&gt;Rate Limiting Headers&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/my-account/access-tokens&quot;&gt;Customize the rate limit per access token.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-RateLimit-Limit&lt;/code&gt; number of allowed requests/minute.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-RateLimit-Remaining&lt;/code&gt; remaining requests within the current period.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-RateLimit-Reset&lt;/code&gt; seconds to wait before having maximum number of allowed requests again.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h3 class=&quot;mt-3&quot;&gt;Pagination Headers&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Total&lt;/code&gt; total number of results.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Pages&lt;/code&gt; total number of pages.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Page&lt;/code&gt; current page number.&lt;/li&gt;&lt;li&gt;&lt;code&gt;X-Pagination-Limit&lt;/code&gt; results per page.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-3&quot;&gt;API Version 2&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Path: &lt;code&gt;/public/v2/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Response format Object or Array of Objects &lt;code&gt;{}&lt;/code&gt; or &lt;code&gt;[{}]&lt;/code&gt;&lt;/li&gt;&lt;li&gt;HTTP Status code contains the actual response code, response headers contains the pagination information, response body contains the results.&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-3&quot;&gt;API Version 1&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Path: &lt;code&gt;/public/v1/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Response format &lt;code&gt;{ meta:, data: }&lt;/code&gt;&lt;/li&gt;&lt;li&gt;HTTP status code contains the actual response code, &lt;code&gt;meta&lt;/code&gt; contains the pagination information and &lt;code&gt;data&lt;/code&gt; contains the actual results&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-3&quot;&gt;API Version 0&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Path: &lt;code&gt;/public-api/*&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Response format &lt;code&gt;{ code :, meta:, data: }&lt;/code&gt;&lt;/li&gt;&lt;li&gt;HTTP status code is always 200, &lt;code&gt;code&lt;/code&gt; contains the actual response code, &lt;code&gt;meta&lt;/code&gt; contains the pagination information, &lt;code&gt;data&lt;/code&gt; contains the actual results&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5&quot;&gt;Authentication&lt;/h3&gt;&lt;p&gt;Unlike Web applications, RESTful APIs are usually stateless, which means sessions or cookies should not be used. Therefore, each request should come with some sort of authentication credentials. A common practice is to send a secret access token with each request to authenticate the user. Since an access token can be used to uniquely identify and authenticate a user, API requests should always be sent via HTTPS to prevent man-in-the-middle (MitM) attacks. &lt;/p&gt;&lt;p&gt;There are different ways to send an access token:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Basic_access_authentication&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;HTTP Basic Auth&lt;/a&gt;: the access token is sent as the username.&lt;/li&gt;&lt;li&gt;Query parameter: the access token is sent as a query parameter in the API URL. &lt;br /&gt;e.g. &lt;samp&gt;https://gorest.co.in/public/v2/users?access-token=xxx&lt;/samp&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://oauth.net/2/&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;OAuth 2&lt;/a&gt;: the access token is obtained by the consumer from an authorization server and sent to the API server via &lt;a href=&quot;https://tools.ietf.org/html/rfc6750&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;HTTP Bearer Tokens &lt;/a&gt;, according to the OAuth2 protocol.&lt;/li&gt;&lt;li class=&quot;text-info&quot;&gt;This API supports only &amp;quot;HTTP Bearer Tokens&amp;quot; and &amp;quot;Query parameter Auth&amp;quot;&lt;/li&gt;&lt;/ul&gt;&lt;h3 class=&quot;mt-5 mb-3&quot;&gt;cUrl Examples for REST API&lt;/h3&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;List users&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XGET &quot;https://gorest.co.in/public/v2/users&quot;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Create user&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/users&quot; -d &#39;{&quot;name&quot;:&quot;Tenali Ramakrishna&quot;, &quot;gender&quot;:&quot;male&quot;, &quot;email&quot;:&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;dfabbab1beb3b6f1adbeb2beb4adb6acb7b1be9feeeabcbaf1bcb0b2&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;&quot;, &quot;status&quot;:&quot;active&quot;}&#39; &lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Update user&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPATCH &quot;https://gorest.co.in/public/v2/users/50&quot; -d &#39;{&quot;name&quot;:&quot;Allasani Peddana&quot;, &quot;email&quot;:&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;5c3d30303d2f3d3235722c3938383d323d1c6d693f39723f3331&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;&quot;, &quot;status&quot;:&quot;active&quot;}&#39; &lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Delete user&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XDELETE &quot;https://gorest.co.in/public/v2/users/50&quot;&lt;/samp&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-5 mb-3&quot;&gt;cUrl Examples for GraphQL&lt;/h3&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;List users&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;query{users {pageInfo {endCursor startCursor hasNextPage hasPreviousPage} totalCount nodes {id name email gender status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Get User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;query{user(id: 50) { id name email gender status }}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Create User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;mutation{createUser(input: {name: \&quot;Tenali Ramakrishna\&quot; gender: \&quot;male\&quot; email: \&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;2e5a4b404f4247005c4f434f455c475d46404f6e1f1b4d4b004d4143&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;\&quot; status: \&quot;active\&quot;}) {user{id name gender email status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Update User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;mutation{updateUser(input: {id: 50 name: \&quot;Allasani Peddana\&quot; email: \&quot;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;03626f6f6270626d6a2d73666767626d6243323660662d606c6e&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;\&quot; status: \&quot;active\&quot;}) {user{id name gender email status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;div class=&quot;mb-3&quot;&gt;&lt;h6 class=&quot;text-info&quot;&gt;Delete User&lt;/h6&gt;&lt;samp class=&quot;user-select-all text-break&quot;&gt;curl -i -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; -H &quot;Authorization: Bearer ACCESS-TOKEN&quot; -XPOST &quot;https://gorest.co.in/public/v2/graphql&quot; -d &#39;{&quot;query&quot;:&quot;mutation{deleteUser(input: {id: 50}){user {id name email gender status}}}&quot;}&#39;&lt;/samp&gt;&lt;/div&gt;&lt;h3 class=&quot;mt-5&quot;&gt;REST API Http Response Codes&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;200: OK. Everything worked as expected.&lt;/li&gt;&lt;li&gt;201: A resource was successfully created in response to a POST request. The Location header contains the URL pointing to the newly created resource.&lt;/li&gt;&lt;li&gt;204: The request was handled successfully and the response contains no body content (like a DELETE request).&lt;/li&gt;&lt;li&gt;304: The resource was not modified. You can use the cached version.&lt;/li&gt;&lt;li&gt;400: Bad request. This could be caused by various actions by the user, such as providing invalid JSON data in the request body etc.&lt;/li&gt;&lt;li&gt;401: Authentication failed.&lt;/li&gt;&lt;li&gt;403: The authenticated user is not allowed to access the specified API endpoint.&lt;/li&gt;&lt;li&gt;404: The requested resource does not exist.&lt;/li&gt;&lt;li&gt;405: Method not allowed. Please check the Allow header for the allowed HTTP methods.&lt;/li&gt;&lt;li&gt;415: Unsupported media type. The requested content type or version number is invalid.&lt;/li&gt;&lt;li&gt;422: Data validation failed (in response to a POST request, for example). Please check the response body for detailed error messages.&lt;/li&gt;&lt;li&gt;429: Too many requests. The request was rejected due to rate limiting.&lt;/li&gt;&lt;li&gt;500: Internal server error. This could be caused by internal program errors.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;hr class=&quot;mt-5&quot; /&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;footer&quot;&gt;&lt;ul class=&quot;list-inline&quot;&gt;&lt;li class=&quot;list-inline-item&quot;&gt;&amp;copy; Go Rest 2022&lt;/li&gt;&lt;li class=&quot;list-inline-item float-lg-end&quot;&gt;&lt;a href=&quot;/privacy-policy&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;list-inline-item float-lg-end me-3&quot;&gt;&lt;a href=&quot;/contact-us&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;script data-cfasync=&quot;false&quot; src=&quot;/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
