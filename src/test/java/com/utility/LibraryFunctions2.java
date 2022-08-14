@@ -28,11 +28,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -248,7 +253,7 @@ public class LibraryFunctions2 {
 		objWorkSheet.getRow(row).createCell(18).setCellValue("PASS");
 		objWorkSheet.getRow(row).getCell(18).setCellStyle(CellStyle);
 	}
-
+	
 	public static HashMap<String, String> ReadExcelFile2OWN(XSSFSheet objWorkSheet, int row) {
 		// TODO Auto-generated method stub
 		DataFormatter ObjFormatter = new DataFormatter();
@@ -297,5 +302,62 @@ public class LibraryFunctions2 {
 		}
 
 	}
+	
+	//Method 1 for SeleniumGrid Browser
+	public static WebDriver initializeBrowser(String browserName) {
+		DesiredCapabilities dc = new DesiredCapabilities();
+		if(browserName.equals("chrome")) {
+			dc.setBrowserName("chrome");
+		}else if(browserName.equals("firefox")) {
+			dc.setBrowserName("firefox");
+		}else if(browserName.equals("safari")) {
+			dc.setBrowserName("safari");
+		}else if(browserName.equals("Edge")) {
+			dc.setBrowserName("Edge");
+		}else if(browserName.equals("ie")) {
+			dc.setBrowserName("ie");
+		}
+		try {
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);	
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return driver;
+	}
+	//Method 2 for SeleniumGrid Browser (Prefered to use the second method )
+	public static WebDriver getBrowserCapabilities(String driverParameter) {
+		  DesiredCapabilities capabilities = null;
+		  if (driverParameter == null || driverParameter.equalsIgnoreCase("FIREFOX")) {
+		    capabilities = DesiredCapabilities.firefox();
+		    FirefoxOptions options = new FirefoxOptions();
+		    capabilities.merge(options);
+		  }
+		  else if (driverParameter.equalsIgnoreCase("IE")) {
+		    capabilities = DesiredCapabilities.internetExplorer();
+		    InternetExplorerOptions options = new InternetExplorerOptions();
+		    capabilities.merge(options);
+		  }
+		  else if (driverParameter.equalsIgnoreCase("CHROME")) {
+		    capabilities = DesiredCapabilities.chrome();
+		    ChromeOptions options = new ChromeOptions();
+		 //   options.setHeadless(headless);
+		    capabilities.merge(options);
+		  }
+		  else if (driverParameter.equalsIgnoreCase("EDGE")) {
+			    capabilities = DesiredCapabilities.edge();
+			    EdgeOptions options = new EdgeOptions();
+			    capabilities.merge(options);
+			  }
+		  
+		  try {
+				driver = new RemoteWebDriver(new URL("http://localhost:4444"),capabilities);	
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return driver;
+		 
+		}
 
 }

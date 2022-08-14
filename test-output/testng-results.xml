@@ -2,48 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-09T10:38:31 IST" name="Default suite" finished-at="2022-08-09T10:38:34 IST" duration-ms="2896">
+  <suite started-at="2022-08-14T16:04:30 IST" name="Default suite" finished-at="2022-08-14T16:04:52 IST" duration-ms="21829">
     <groups>
     </groups>
-    <test started-at="2022-08-09T10:38:31 IST" name="Default test" finished-at="2022-08-09T10:38:34 IST" duration-ms="2896">
-      <class name="com.RestAssured.DELETERequestDeleteUserGoRest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:31 IST" name="beforeSuite" finished-at="2022-08-09T10:38:31 IST" duration-ms="20" status="PASS">
+    <test started-at="2022-08-14T16:04:30 IST" name="Default test" finished-at="2022-08-14T16:04:52 IST" duration-ms="21829">
+      <class name="com.testng.testNGKeyEventsUsingAction">
+        <test-method signature="TestUsingActionsForKeyEvent()[pri:0, instance:com.testng.testNGKeyEventsUsingAction@fa4c865]" started-at="2022-08-14T16:04:30 IST" name="TestUsingActionsForKeyEvent" finished-at="2022-08-14T16:04:52 IST" duration-ms="21781" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:31 IST" name="beforeTest" finished-at="2022-08-09T10:38:31 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:31 IST" name="beforeClass" finished-at="2022-08-09T10:38:31 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:31 IST" name="beforeMethod" finished-at="2022-08-09T10:38:31 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="GetRequest()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:31 IST" name="GetRequest" finished-at="2022-08-09T10:38:34 IST" duration-ms="2840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetRequest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:34 IST" name="afterMethod" finished-at="2022-08-09T10:38:34 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:34 IST" name="afterClass" finished-at="2022-08-09T10:38:34 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:34 IST" name="afterTest" finished-at="2022-08-09T10:38:34 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.RestAssured.DELETERequestDeleteUserGoRest@619713e5]" started-at="2022-08-09T10:38:34 IST" name="afterSuite" finished-at="2022-08-09T10:38:34 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.RestAssured.DELETERequestDeleteUserGoRest -->
+        </test-method> <!-- TestUsingActionsForKeyEvent -->
+      </class> <!-- com.testng.testNGKeyEventsUsingAction -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
